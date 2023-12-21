@@ -23,7 +23,8 @@ export function ViewHostel(){
                                     <label>{hostel[1]['vacantRooms']}</label>
                                     <button onClick={() =>{
                                         navigateToPage('/hostel/book', {state:{
-                                            id:hostel[1]['id']
+                                            id:hostel[1]['id'],
+                                            file:hostel[1]['filename']
                                         }}
                                         )}
                                     }>Book</button>
