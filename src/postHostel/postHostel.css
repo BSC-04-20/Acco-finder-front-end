@@ -1,0 +1,79 @@
+:root{
+    --login-page-welcome-text-color: #FFFFFF;
+    --login-form-background-color-primary : #FDF6F6;
+    --login-btn-color:#014372;
+    --input-text-color:#4A4848;
+    --forgot-password-text-color-2:#121BEC;
+    }
+.post-hostel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid crimson;
+
+    }
+
+.room-picture-container{
+    margin-top: 5%;
+    display: flex;
+    justify-self: center;
+    width: 80vh;
+    height: 40%;
+    }
+.room-picture-container img{
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    }
+.hostelPostingForm{
+
+    width: 38vw;
+    height: 40vh;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    }
+.file-field{
+    margin-top: 2%;
+    width: 100%;
+    height: 10%;
+    outline: none;
+    border: none;
+    color: var(--input-text-color);
+    font-weight: bold;
+    text-transform: capitalize;
+    background: var(--login-form-background-color-primary);
+    }
+.hostelPostingForm .input-field
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0;
+    width: 45%;
+    height: 10%;
+    font-size: 20px;
+    text-transform: capitalize;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid var(--input-text-color);
+    }
+.input-field:active, .input-field:focus{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0;
+    width: 35%;
+    height: 10%;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid var(--input-text-color);
+    }
+.input-field:active, .input-field:focus{
+    border-bottom: 2px solid var(--login-btn-color);
+    }
