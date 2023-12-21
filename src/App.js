@@ -4,6 +4,7 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 import { LandlordDashBoard } from './landlordDashboard/landlordDashboard';
 import { PostHostel } from './postHostel/postHostel';
+import { ViewHostel } from './viewHostels/viewHostels';
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
     {
       path:'/hostel/post',
       element:<PostHostel/>
+    },
+    {
+      path: '/hostels/view',
+      element:<ViewHostel/>
     }
   ])
 
