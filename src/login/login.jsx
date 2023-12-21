@@ -17,7 +17,7 @@ export function Login(){
         const csrf = await client.get('/sanctum/csrf-cookie');
         
         if(accountType == 'Student'){
-            endpoint = '/api/landlord/login';
+            endpoint = '/api/student/login';
         }
         
         else if(accountType == 'Landlord' || accountType == 'Agent'){
