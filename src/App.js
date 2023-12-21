@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Login } from './login/login';
 import { Register } from './register/register';
 import { LandlordDashBoard } from './landlordDashboard/landlordDashboard';
+import { PostHostel } from './postHostel/postHostel';
 
 function App() {
 
@@ -20,6 +20,10 @@ function App() {
       path: '/landlord/dashboard',
       element: <LandlordDashBoard />,
     },
+    {
+      path:'/hostel/post',
+      element:<PostHostel/>
+    }
   ])
 
   return (
