@@ -1,3 +1,4 @@
+import axios, { Axios } from "axios";
 import { useState } from "react";
 
 export function Register(){
@@ -7,10 +8,35 @@ export function Register(){
     const [phonenumber, setPhoneNumber] = useState();
     const [password, setPassword] = useState();
     const [accountType, setAccountType] = useState();
+    let endpoint = '';
     
     async function handleRegister(event){
         event.preventDefault()
-        console.log(accountType);
+        
+        const formData = new FormData();
+        formData.append('firstname', firstname);
+        formData.append('lastname', lastname);
+        formData.append('email', email);
+        formData.append('phonenumber', phonenumber);
+        formData.append('password', password);
+
+        if(accountType == 'Student'){
+            endpoint = 'http://localhost:8000/api/students/register';
+        }
+        
+        else if(accountType == 'Landlord' || accountType == 'Agent'){
+            endpoint='http://localhost:8000/api/landlords/register';
+        }
+
+        axios.post(endpoint, formData)
+        .then((response) => {
+            if(response.status == 201){
+                alert('Registered Successfully');
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     }
 
     return(
