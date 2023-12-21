@@ -1,5 +1,6 @@
 import { useState } from "react"
 import client from "../axiosClient/Client";
+import './login.css'
 
 export function Login(){
     const [email, setEmail] = useState();
