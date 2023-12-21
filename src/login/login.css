@@ -1,0 +1,76 @@
+:root{
+    --login-page-welcome-text-color: #FFFFFF;
+    --login-form-background-color-primary : #FDF6F6;
+    --login-btn-color:#014372;
+    --login-header-text-color:#4A4848;
+    --forgot-password-text-color-2:#121BEC;
+    }
+
+/*     } */
+.login-form{
+    margin-top: 30%;
+  margin-left: 24%;
+
+    width: 50vw;
+    height: 85vh;
+    background-color: var(--login-form-background-color-primary);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.75);
+}
+.imput-container{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 30%;
+    margin-left: 18%;
+    }
+.imput-container .input{
+    font-size: 20px;
+    width: 50%;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    }
+ .student-label{
+     position: absolute;
+       bottom: 30%;
+     }
+.agent-label{
+    position: absolute;
+    bottom: 14.7%;
+    }
+.select{
+
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    margin-left: 15%;
+    border: 1px solid blue;
+    }
+/* .select-student{ */
+/*     position: absolute; */
+/*     bottom: 25%; */
+/*     width: 30%; */
+/*     margin-left: 15%; */
+/*     } */
+/* .landlord-select{ */
+/*     position: absolute; */
+/*     bottom: 25%; */
+/*     } */
+.login-submit-btn{
+    position: absolute;
+    left: 45%;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    font-weight: bold;
+    color: var(--login-page-welcome-text-color);
+    background-color: var(--login-btn-color);
+    }

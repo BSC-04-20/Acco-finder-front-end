@@ -1,5 +1,7 @@
 import { useState } from "react"
 import client from "../axiosClient/Client";
+import './login.css'
+import loginBackgroundImage from '../assets/accofinder logo copy.jpg'
 
 export function Login(){
     const [email, setEmail] = useState();
@@ -34,18 +36,27 @@ export function Login(){
     }
 
     return(
-        <form onSubmit={handleLogin}>
-            <input type="email" placeholder="Email" onChange={(event) => setEmail(event.target.value)} required/><br/>
-            <input type="password" placeholder="password" onChange={(event) => setPassword(event.target.value)} required/><br/>
+        <form onSubmit={handleLogin} className=' login-form'>
+            {/*<div className='login-background-container'>*/}
+            {/*    <img src={loginBackgroundImage} alt="accofinder" className="login-background-image"/>*/}
+            {/*</div>*/}
+            <div className='imput-container'>
+                <input className="input " type="email" placeholder="Email"
+                       onChange={(event) => setEmail(event.target.value)} required/><br/>
+                <input className="input " type="password" placeholder="password"
+                       onChange={(event) => setPassword(event.target.value)} required/><br/>
 
-            <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Student" required/>
-                <label>Student</label><br/>
-            <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Landlord" required/>
-                <label>Landlord</label><br/>
-            <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Agent" required/>
-                <label>Agent</label><br/>
+                <input className=" select select-student " type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Student" required/>
+                <label className='student-label'>Student</label><br/>
 
-            <input type="submit" value='Login'/>
+                <input className=" select select-landlord " type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Landlord" required/>
+                <label className='landlord-label'>Landlord</label><br/>
+
+                <input className=" select select-agent " type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Agent" required/>
+                <label className='agent-label'>Agent</label><br/>
+            </div>
+
+            <input className="input login-submit-btn " type="submit" value='Login'/>
         </form>
     )
 }

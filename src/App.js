@@ -3,7 +3,7 @@
 // import './App.css';
 
 
-import './App.css';
+// import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Login } from './login/login';
 import { Register } from './register/register';
@@ -25,13 +25,7 @@ function App() {
   return (
 
       <div className="App">
-        <header className="App-header">
 
-          <p>
-            Front End React App
-          </p>
-
-        </header>
 
         <div>
           <RouterProvider router={routes} />
