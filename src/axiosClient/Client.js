@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const client = axios.create({
+const Client = axios.create({
     baseURL: 'http://localhost:8000',
     headers: {
         'X-Requested-with':'XMLHttpRequest',
@@ -9,4 +9,4 @@ const client = axios.create({
     withXSRFToken:true
 })
 
-export default client;
+export default Client;

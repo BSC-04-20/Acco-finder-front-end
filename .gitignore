@@ -11,6 +11,9 @@
 # production
 /build
 
+#SRC folder for pictures
+/src/hostelPics
+
 # misc
 .DS_Store
 .env.local
