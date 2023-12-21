@@ -1,8 +1,11 @@
-import {useEffect, useState } from "react"
+import {useEffect, useState } from "react";
 import Client from "../axiosClient/Client";
+import { useNavigate } from 'react-router-dom';
 
 export function ViewHostel(){
-    const [hostels, setHostels] = useState()
+    const [hostels, setHostels] = useState();
+    const navigateToPage = useNavigate();
+
     let hostelsArray = [];
     const fetchHostels = async () => {
 
@@ -18,7 +21,12 @@ export function ViewHostel(){
                                     <label>{hostel[1]['name']}</label>
                                     <label>{hostel[1]['gender']}</label>
                                     <label>{hostel[1]['vacantRooms']}</label>
-                                    <button>Book</button>
+                                    <button onClick={() =>{
+                                        navigateToPage('/hostel/book', {state:{
+                                            id:hostel[1]['id']
+                                        }}
+                                        )}
+                                    }>Book</button>
                                 </div>
                             </div>
                         )

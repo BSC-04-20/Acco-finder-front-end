@@ -5,6 +5,7 @@ import { Register } from './register/register';
 import { LandlordDashBoard } from './landlordDashboard/landlordDashboard';
 import { PostHostel } from './postHostel/postHostel';
 import { ViewHostel } from './viewHostels/viewHostels';
+import { BookHostel } from './bookingPage/bookPage';
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
     {
       path: '/hostels/view',
       element:<ViewHostel/>
+    },
+    {
+      path:'/hostel/book',
+      element:<BookHostel/>
     }
   ])
 
