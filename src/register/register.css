@@ -1,0 +1,92 @@
+.wholecard{
+    display: flex;
+    height: 100vh;
+    background-color: rgb(222, 240, 249);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 50%;
+    border-radius: 10px;
+    background-color: white;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+.leftcard{
+    flex: 0;
+    background: linear-gradient(rgba(26, 34, 46, 0.5), rgba(39, 25, 46, 0.5)), url("./zomba.jpeg") center;
+    background-size: cover;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    color: white;
+    align-items: center;
+}
+
+img{
+    height: 30%;
+    width: 30%;
+}
+
+.heading{
+    font-size: 100%;
+    line-height: 100%;
+}
+
+.right{
+    width: 30%;
+    border-radius: 10px;
+    background-color: white;
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0% 10%;
+    gap: 3%;
+    color: #014372;
+}
+
+h2{
+    color: #555;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding: 0% 1%;
+}
+
+.button{
+    width: 50%;
+    padding: 1%;
+    border: none;
+    background-color: #443bf1;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: #938eef;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+    border-bottom: #555 solid;
+}
+
+.radio{
+    display: flex;
+    justify-content: column;
+    gap: 1%;
+}

@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import axios, { Axios } from "axios";
 import { useState } from "react";
+import "./register.css";
+import Logo from "./accofinder.png"
 
 export function Register(){
     const [firstname, setFirstName] = useState();
@@ -39,23 +42,46 @@ export function Register(){
         })
     }
 
-    return(
-    <form onSubmit={handleRegister}>
-        <input type="text"  placeholder="firstname" onChange={(event) => setFirstName(event.target.value)} required/><br/>
-        <input type="text" placeholder="lastname" onChange={(event) => setLastName(event.target.value)} required/><br/>
-        <input type="email" placeholder="email" onChange={(event) => setEmail(event.target.value)} required/><br/>
-        <input type="number" placeholder="phonenumber" onChange={(event) => setPhoneNumber(event.target.value)} required/><br/>
-        <input type="password" placeholder="password" onChange={(event) => setPassword(event.target.value)} required/><br/>
+            return(
+                <div className ="wholecard">
+                    <div className="card">
+                    <div className="leftcard">
+                        <img src={Logo} alt="logo" />
+                        <div className="text">
+                            <h1 className="heading">
+                                WELCOME TO ACCOFINDER.
+                            </h1>
+                        <div className="smalltext">
+                        </div>
+                            <p>
+                                already have an account?
+                                <Link>
+                                click here
+                                </Link>
+                            </p>
+                        </div>
+                    </div>
+                
+                    <form onSubmit={handleRegister} className="right">
+                        <h2>Register</h2>
+                        <input type="text"  placeholder="firstname" onChange={(event) => setFirstName(event.target.value)} required/><br/>
+                        <input type="text" placeholder="lastname" onChange={(event) => setLastName(event.target.value)} required/><br/>
+                        <input type="email" placeholder="email" onChange={(event) => setEmail(event.target.value)} required/><br/>
+                        <input type="number" placeholder="phonenumber" onChange={(event) => setPhoneNumber(event.target.value)} required/><br/>
+                        <input type="password" placeholder="password" onChange={(event) => setPassword(event.target.value)} required/><br/>
+                        <div className="radio">
+                        <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Student" required/>
+                            <label>Student</label><br/>
+                        <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Landlord" required/>
+                            <label>Landlord</label><br/>
+                        <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Agent" required/>
+                            <label>Agent</label><br/>
+                        </div>
 
-        <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Student" required/>
-            <label>Student</label><br/>
-        <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Landlord" required/>
-            <label>Landlord</label><br/>
-        <input type='radio' name="accountType" onChange={(event) => setAccountType(event.target.value)} value="Agent" required/>
-            <label>Agent</label><br/>
-
-        <input type="submit" value="Register"/>
-    </form>
-    )
+                        <input type="submit" className="button" value="Register"/>
+                    </form>
+                </div>
+            </div>
+            )
 }
 

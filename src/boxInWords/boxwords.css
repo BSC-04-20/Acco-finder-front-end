@@ -1,0 +1,61 @@
+.boxMain .firstBox {
+  margin-left: 1rem;
+}
+.boxMain .lastBox {
+  margin-right: 1rem;
+}
+.boxMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+}
+.box1 {
+  display: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  height: 17rem;
+  width: 25rem;
+  border-radius: 1px solid lightgray;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: bolder;
+  position: relative;
+  font-size: 50px;
+  color: #01394f;
+}
+
+.paragraph {
+  font-weight: lighter;
+  font-size: 1rem;
+  position: relative;
+  font-weight: bold;
+  margin-top: 30%;
+  color: #01394f;
+}
+&:hover{
+  color: white;
+}
+
+
+.box1:hover {
+  background: rgba(195, 176, 195, 0.297);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 850px) {
+  .boxMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .box1 {
+    height: 20rem;
+    width: 27rem;
+  }
+}

@@ -1,0 +1,46 @@
+.home{
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: #014372;
+}
+.img{
+        
+    width: 350%;
+    height: 200%;
+    overflow: hidden;
+    height: auto; 
+    display: block;
+}
+
+.homeContent{
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color:  whitesmoke;
+    text-shadow: #000000 1px 1px 5px ;
+    padding: 10px;
+    text-align: center;
+}
+
+.textDiv{
+    padding: 2rem 0;
+}
+
+.smallText{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow:(2px, 2px, 4px, #000000);
+}
+
+.homeTitle{
+    position: relative;
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+}
+
