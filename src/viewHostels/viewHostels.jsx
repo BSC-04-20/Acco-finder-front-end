@@ -19,6 +19,7 @@ export function ViewHostel(){
                                     <label>{hostel[1]['gender']}</label>
                                     <label>{hostel[1]['vacantRooms']}</label>
                                     <button>Book</button>
+                                    <p>lorem</p>
                                 </div>
                             </div>
                         )

@@ -33,7 +33,8 @@ export function PostHostel(){
     return(
         <div className='post-hostel-container'>
              <div className='room-picture-container'>
-                 <img src={image} alt='hostel'/>
+                 <img src={image ?  image: RoomPhoto} alt='Hostel Picture'/>
+
              </div>
             <form onSubmit={handlePosting} className="hostelPostingForm">
                 <input id='upload-btn' className='file-field' type="file" onChange={(event) => setImage(event.target.files[0])}/>
