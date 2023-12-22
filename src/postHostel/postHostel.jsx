@@ -33,7 +33,7 @@ export function PostHostel(){
     return(
         <div className='post-hostel-container'>
              <div className='room-picture-container'>
-                 <img src={RoomPhoto} alt='hostel'/>
+                 <img src={image} alt='hostel'/>
              </div>
             <form onSubmit={handlePosting} className="hostelPostingForm">
                 <input id='upload-btn' className='file-field' type="file" onChange={(event) => setImage(event.target.files[0])}/>
@@ -63,10 +63,12 @@ export function PostHostel(){
 
                 </div>
                 <br/>
-                <input type="radio" name="gender" value="male"
-                       onChange={(event) => setGender(event.target.value)}/><label>Male</label><br/>
-                <input  type="radio" name="gender" value="female"
-                       onChange={(event) => setGender(event.target.value)}/><label>Female</label><br/>
+                <input className='radio-input first' id='male' type="radio" name="gender" value="male"
+                       onChange={(event) => setGender(event.target.value)}/>
+                <label className='male' htmlFor='male'>Male</label><br/>
+                <input className='radio-input second' id='female' type="radio" name="gender" value="female"
+                       onChange={(event) => setGender(event.target.value)}/>
+                <label className='female' htmlFor='female'>Female</label><br/>
                 <input className='submit-btn' type="submit"/>
             </form>
         </div>

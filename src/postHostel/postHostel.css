@@ -143,3 +143,12 @@ transform: scale(1.05);
     box-shadow: 3px 5px 4px rgba(0,0,0,0.5);
 
     }
+.radio-input{
+    width: 5%;
+    height: 5%;
+    border: 2px solid var(--login-btn-color);
+    }
+.radio-input:checked + .male, .radio-input:checked + .female{
+    color: var(--login-btn-color);
+    font-weight: bolder;
+    }
