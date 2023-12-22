@@ -6,6 +6,7 @@ import { LandlordDashBoard } from './landlordDashboard/landlordDashboard';
 import { PostHostel } from './postHostel/postHostel';
 import { ViewHostel } from './viewHostels/viewHostels';
 import { BookHostel } from './bookingPage/bookPage';
+import { PendingBookingStatus } from './landlordDashboard/pendingBooking/pendingBooking';
 
 function App() {
 
@@ -33,6 +34,10 @@ function App() {
     {
       path:'/hostel/book',
       element:<BookHostel/>
+    },
+    {
+      path:'/hostel/pending',
+      element:<PendingBookingStatus/>
     }
   ])
 
