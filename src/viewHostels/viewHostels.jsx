@@ -12,7 +12,7 @@ export function ViewHostel(){
 
                     setHostels(hostelsArray.map((hostel, index) => {
                         return(
-                            <div>                    
+                            <div className='view-hostel-container'>
                                 <img src={require(`../hostelPics/${hostel[1]['filename']}`)}/>
                                 <div>
                                     <label>{hostel[1]['name']}</label>

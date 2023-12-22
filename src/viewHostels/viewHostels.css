@@ -1,0 +1,7 @@
+.view-hostel-container{
+display: flex;
+    width: 80vw;
+    height: 70vh;
+    border: 1px solid papayawhip;
+
+    }
